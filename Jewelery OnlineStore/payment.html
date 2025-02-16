@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora - Checkout</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="payment2.css">
+    <link rel="icon" type="image/x-icon" href="imgs/titlelogo3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <P>AURORA JEWELRY - CHECKOUT</p>
+    </header>
+    <h1 class="heading1">Your Order</h1>
+    <hr>
+        
+    <div class="block1" id="contentocopy">
+        <!--products display -->
+            
+    </div>
+
+    <!--payment info-->
+    <h1>Your Total</h1>
+    <hr>
+    <div class="yourtotal">
+        <div id="cost-informatiom">
+          <p>Items <span id="item-count">x 0</span></p>
+          <p>Products' Cost: <span id="total-price"> $0.00</span></p>  
+          <p>Delivery Cost: <span id="delivery-cost"> $0.00</span></p>
+          <p>Total Cost: <span id="final-price"> $0.00</span></p>
+        </div> 
+        <div class="delivery">
+            <p>Free Shipping Promotion: <br> Free delivery on orders over $1000!</p>
+            <img src="imgs/shipping.jpeg" alt="">
+        </div>
+    </div>
+    
+    <h1>Billing Details</h1>
+    <hr>
+    <form class="form1" id="paymentForm" action="" onsubmit="return confirmSubmission(event)">
+    <div class="parentdiv">
+            <div class="leftdiv">
+                <div class="space"><label for="fullname"><span class="asterisk">Full Name</span></label>
+                    <input type="text" 
+                    name="fullname" size="15" maxlength="30" class="width" required>
+                </div>
+                <div class="space"><label for="email"><span class="asterisk">Email</span></label>
+                    <input type="email" placeholder="example@example.com" name="email" class="width" required>
+                </div>
+                <div class="space"><label for="country"><span class="asterisk">Country / Region</span></label>
+                    <select id="country" name="country" required class="width">
+                        <option value="CY">Cyprus</option>
+                        <option value="TR">Turkey</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                    </select>
+                </div>
+                <div class="space"><label for="city"><span class="asterisk">City</span></label>
+                    <input type="text" name="city" class="width" required>
+                </div>
+                <div class="space"><label for="address"><span class="asterisk">Address</span></label>
+                    <input type="text" placeholder="House number and Street name" 
+                    name="address" class="width" required>
+                </div>
+                <div class="space"><label for="postcode"><span class="asterisk">Postcode</span></label>
+                    <input type="text" name="postcode" class="width" required>
+                
+                </div>
+            </div>
+            <div class="rightdiv">
+                <label>
+                   Choose your payment method: <input type="radio" name="payment" value="visa" required/>Visa
+                   <input type="radio" name="payment" value="mastercard" required/>Mastercard
+                </label><br>
+
+                <label class="cardname">
+                   Name on the Card: <input type="text" 
+                   name="cardname" size="15" maxlength="15" required>
+                   <input type="text" 
+                   name="cardname" size="15" maxlength="15" required>
+                   <input type="text" 
+                   name="cardname" size="15" maxlength="15" required>
+                   <input type="text" 
+                   name="cardname" size="15" maxlength="15" required>
+                   </label><br>
+                <label>
+                   Expiry Date: 
+                   <select name="month" required>
+                       <option value="">Month</option>
+                       <option value="January">January</option>
+                       <option value="February">February</option>
+                       <option value="March">March</option>
+                       <option value="April">April</option>
+                       <option value="May">May</option>
+                       <option value="June">June</option>
+                       <option value="July">July</option>
+                       <option value="August">August</option>
+                       <option value="September">September</option>
+                       <option value="October">October</option>
+                       <option value="November">November</option>
+                       <option value="December">December</option>
+                    </select>
+                    <select name="year" required>
+                       <option value="">Year</option>
+                       <option value="2024">2024</option>
+                       <option value="2025">2025</option>
+                       <option value="2026">2026</option>
+                       <option value="2027">2027</option>
+                       <option value="2028">2028</option>
+                       <option value="2029">2029</option>
+                       <option value="2030">2030</option>
+                    </select>
+                </label><br>
+                <label>
+                    CVV: <input type="text" id="cvvInput" maxlength="3" oninput="restrictCVV(this)">
+                </label><br>
+                <div class="button">
+                    <button type="button" class="empty" onclick="resetEverything ()";>Empty Cart</button>
+                    <button type="submit" class="checkout" >Checkout</button>
+                </div>
+            </div>
+        </div>
+        
+    </form>
+    
+    <footer>
+        <div class="footermain">
+                <ul class="list">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="prdct-Pg.html">Products</a></li>
+                  <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+        </div>
+        <div class="bottom">
+            <p>&copy; 2024 Aurora Jewelry . All rights reserved.</p>
+        </div>
+    </footer>
+    
+<script src="paymentpage.js"></script>
+<script src="reset.js"></script>
+</body>
+</html>
